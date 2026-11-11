@@ -295,6 +295,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .cs-tile::after{content:"";position:absolute;right:-18%;top:-30%;width:62%;aspect-ratio:1;border-radius:50%;border:1.5px solid rgba(255,255,255,.35)}
 .cs-tile::before{content:"";position:absolute;right:-6%;top:-12%;width:38%;aspect-ratio:1;border-radius:50%;border:1.5px solid rgba(255,255,255,.25)}
 .feature+.feature{margin-top:-20px}
+.cs-num{display:block;font-size:clamp(64px,8vw,112px);line-height:.9;letter-spacing:-.06em;margin-bottom:10px}
+.cs-num small{font-size:.32em;letter-spacing:-.02em;margin-left:4px}
+.jobs{list-style:none;margin:0;padding:0;border-top:1.5px solid var(--ink)}
+.jobs li{display:grid;grid-template-columns:150px 1fr;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14.5px;font-weight:600}
+.jobs li span{font-size:12.5px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;padding-top:1px}
+.jobs li:first-child{color:var(--accent)}
+@media (max-width:560px){.jobs li{grid-template-columns:1fr;gap:0}}
+.facts .tl li{grid-template-columns:104px 1fr}
 </style>
 </head>
 <body>
@@ -369,7 +377,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <div>
       <p class="quote rv">“고객이 <b>왜 사는지</b> 알면, 무엇을 말해야 할지 보입니다.”</p>
       <p class="rv">가톨릭대학교 공간디자인·소비자학과에서 소비자 행동과 공간 경험을 함께 배웠습니다. 설문과 인터뷰로 <b>고객이 무엇을 왜 선택하는지</b> 확인하고, 그 결과를 기획으로 옮기는 일을 반복해 왔습니다.</p>
-      <p class="rv">매머드커피 매장에서 고객을 직접 응대하고, 교내 홍보 부스 운영과 성북구청 청년 행정체험단 활동으로 사람을 만나는 현장을 경험했습니다. 브랜드와 고객 사이를 잇는 영업·마케터로 성장하고 싶습니다.</p>
+      <p class="rv">2022년부터 약 4년 동안 카페 네 곳에서 고객을 직접 응대했고, 교내 홍보 부스 운영과 성북구청 청년 행정체험단 활동으로 사람을 만나는 현장을 경험했습니다. 브랜드와 고객 사이를 잇는 영업·마케터로 성장하고 싶습니다.</p>
 
       <div class="intern rv">
         <span class="badge">INTERNSHIP</span>
@@ -411,7 +419,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
           </div>
           <h3>Experience</h3>
           <ul class="tl">
-            <li><span>현재</span>매머드커피 매장 아르바이트 <em>고객 응대·매장 운영</em></li>
+            <li><span>2026.04–</span>매머드 익스프레스 성신여대로데오점 <em>재직 중</em></li>
             <li><span>2025.09–12</span>희림종합건축사사무소 주거인테리어파트 인턴</li>
             <li><span>2025.05</span>한국실내디자인학회 인테리어 트렌드 살롱 세미나 이수 <em>FuturEspace 2025</em></li>
             <li><span>2025.04</span>약학관 전자미세현미경 1:1 목업 제작</li>
@@ -420,6 +428,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
             <li><span>2024.03–12</span>학과 학생회 홍보디자인국원 <em>과제전시회 포스터·설치, 인스타 카드뉴스</em></li>
             <li><span>2024.03–06</span>북스인터내셔널 홍보 팝업 부스 기획·진행 <em>팀장</em></li>
             <li><span>2024.03–06</span>청년일경험프로젝트 렛유인 홍보 영상 기획·제작</li>
+            <li><span>2023.09–25.10</span>우지커피 대학로점</li>
+            <li><span>2023.06–08</span>정부서울청사 사내 풀무원 카페</li>
+            <li><span>2022.06–23.06</span>프롬하츠커피 종로점</li>
             <li><span>2022.05–07</span>부천미래교육센터 지역자원맵 디자인 기획·제작</li>
           </ul>
         </div>
@@ -435,7 +446,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <article class="str rv">
       <span class="k">Customer</span>
       <h3>고객을 직접 만나 왔습니다</h3>
-      <p>매머드커피 매장에서 고객을 응대하고, 교내 홍보 부스 운영과 과제전시회 안내·입장 스태프로 현장에서 사람을 맞이했습니다.</p>
+      <p>카페 네 곳에서 <b>약 4년</b> 동안 고객을 응대했고, 교내 홍보 부스 운영과 과제전시회 안내·입장 스태프로 현장에서 사람을 맞이했습니다.</p>
       <a href="#activity">현장 경험 보기 →</a>
     </article>
     <article class="str rv d1">
@@ -472,13 +483,17 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     </article>
 
     <article class="feature rv">
-      <div class="cs-tile"><span class="vt-label">Customer service · Now</span><span class="cs-big">매장에서<br>고객을 만나는 일</span></div>
+      <div class="cs-tile"><span class="vt-label">Customer service · 2022 — Now</span><span class="cs-big"><span class="cs-num">4<small>년</small></span>카페 네 곳에서<br>고객을 만났습니다</span></div>
       <div class="txt">
         <span class="badge">B2C · CUSTOMER SERVICE</span>
-        <div class="act-meta"><span>현재</span><span>매머드커피</span></div>
-        <h3>매머드커피 매장 아르바이트</h3>
-        <p>매장에서 고객 주문을 응대하고 매장 운영을 함께 맡으며, 고객을 직접 만나는 B2C 현장을 매일 경험하고 있습니다.</p>
-        <div class="tags"><span class="chip">고객 응대</span><span class="chip">매장 운영</span></div>
+        <h3>카페 매장 근무 약 4년</h3>
+        <p>대학 생활 내내 카페 매장에서 고객 주문을 응대하고 매장 운영을 함께했습니다. 종로 상권의 매장, 정부청사 사내 카페, 대학가 매장까지 서로 다른 고객층을 만났습니다.</p>
+        <ul class="jobs">
+          <li><span>2026.04 — 재직 중</span>매머드 익스프레스 성신여대로데오점</li>
+          <li><span>2023.09 — 2025.10</span>우지커피 대학로점</li>
+          <li><span>2023.06 — 2023.08</span>정부서울청사 사내 풀무원 카페</li>
+          <li><span>2022.06 — 2023.06</span>프롬하츠커피 종로점</li>
+        </ul>
       </div>
     </article>
 
